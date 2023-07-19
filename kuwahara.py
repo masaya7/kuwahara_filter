@@ -25,11 +25,12 @@ def kuwahara(pic, r=5, resize=False, rate=0.5):  # 元画像、正方形領域�
 
 
 #画像保存ディレクトリ
-os.chdir(r'assets/img/sample.jpg')
+os.chdir(r'assets/img')
 
 # 画像名を入れる
 picture = np.array(plt.imread("sample.jpg"))
-filtered_pic = kuwahara(pic=picture, r=15, resize=False, rate=0.2)
+#rは荒さが変わる
+filtered_pic = kuwahara(pic=picture, r=10, resize=False, rate=10000)
 plt.imshow(filtered_pic)
 plt.axis("off")
-plt.show()
+plt.show()  #プロット表示
